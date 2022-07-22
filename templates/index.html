@@ -1,0 +1,166 @@
+{% extends "layout.html" %} {% block styles %}
+
+
+
+{% endblock %} {% block title %}Index{% endblock %} {% block content %}
+
+
+<main class="container-md text-light">
+  <div class="screen">
+    <div class="row bg-dark rounded align-items-center p-4">
+      <div class="col-4">
+        <img
+          src="{{ url_for('static', filename='img/matteo.jpg' ) }}"
+          class="img-fluid rounded"
+          alt="not found"
+        />
+      </div>
+      <div class="col-8">
+        <h1>who<span style="color: red">am</span>i</h1>
+        <p>
+          I'm Matteo, a Data Science student at Ca' Foscari University. I'm
+          a linux lover and I really like python scripting. I also have a
+          conservatory diploma in clarinet &#127926;.
+        </p>
+        <h3 class="mt-4">Education 🎓</h3>
+        <p>
+          <ul>
+            <li>2016, High school</li>
+            <li>2019, Barchelor Clarinet</li>
+            <li>2021, Master Clarinet</li>
+            <li>2022, Barchelor Data Science</li>
+          </ul>
+        </p>
+      </div>
+      <div class="row mt-4 text-center justify-content-center">
+        <h1 class="mb-4">Skills</h1>
+        <div class="tech-slideshow">
+          <div class="mover-1">
+          <img
+            src="{{ url_for('static', filename='img/Python-emblem.png') }}"
+            class="immagine"
+            alt="not found"
+          />
+          <img
+            src="{{ url_for('static', filename='img/java-logo-png-transparent.png') }}"
+            class="immagine"
+            alt="not found"
+          />
+          <img
+            src="{{ url_for('static', filename='img/Typescript_logo_2020.svg.png') }}"
+            class="immagine"
+            alt="not found"
+          />
+          <img
+            src="{{ url_for('static', filename='img/Node.js-Logo.wine.png') }}"
+            class="immagine"
+            alt="not found"
+          />
+          <img
+            src="{{ url_for('static', filename='img/react-logo.png') }}"
+            class="immagine"
+            alt="not found"
+          />
+          <img
+            src="{{ url_for('static', filename='img/mongodb-nosql-document-oriented-database-nosql-icon-png-clip-art.png') }}"
+            class="immagine"
+            alt="not found"
+          />
+          <img
+            src="https://e7.pngegg.com/pngimages/738/738/png-clipart-postgresql-database-logo-application-software-computer-software-mysql-logo-blue-text.png"
+            class="immagine"
+            alt="not found"
+          />
+          <img
+          src="{{ url_for('static', filename='img/Python-emblem.png') }}"
+          class="immagine"
+          alt="not found"
+        />
+        <img
+          src="{{ url_for('static', filename='img/java-logo-png-transparent.png') }}"
+          class="immagine"
+          alt="not found"
+        />
+        <img
+          src="{{ url_for('static', filename='img/Typescript_logo_2020.svg.png') }}"
+          class="immagine"
+          alt="not found"
+        />
+        <img
+          src="{{ url_for('static', filename='img/Node.js-Logo.wine.png') }}"
+          class="immagine"
+          alt="not found"
+        />
+        <img
+          src="{{ url_for('static', filename='img/react-logo.png') }}"
+          class="immagine"
+          alt="not found"
+        />
+        <img
+          src="{{ url_for('static', filename='img/mongodb-nosql-document-oriented-database-nosql-icon-png-clip-art.png') }}"
+          class="immagine"
+          alt="not found"
+        />
+        <img
+        src="https://e7.pngegg.com/pngimages/738/738/png-clipart-postgresql-database-logo-application-software-computer-software-mysql-logo-blue-text.png"
+        class="immagine"
+        alt="not found"
+      />
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="latest-blog screen">
+    <div class="row bg-dark rounded align-items-center p-4">
+      <h1>Latest posts</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Exercitationem id atque in porro aut animi culpa assumenda fugit, ea
+        totam.
+      </p>
+      <div
+        class="row row-cols-1 row-cols-lg-2 align-items-stretch g-4 py-5"
+      >
+      {% for post in last_posts %}
+        <div class="col">
+          <div
+            class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="
+              background-image: url('static/{{post.image}}');
+            "
+          >
+            <div
+              class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+            >
+              <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}"><h2 class="text-light pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{ post.title }}</h2></a>
+              <ul class="d-flex list-unstyled mt-auto">
+                <li class="d-flex align-items-center me-3">
+                  {% for tag in post.tags %}
+                  <span class="badge text-bg-light mx-1">{{ tag }}</span>
+                  {% endfor %}
+                </li>
+                <li class="d-flex align-items-center me-3">
+                  <svg class="bi me-2" width="1em" height="1em">
+                    <use xlink:href="#calendar-3">
+                      <small>{{ post.date }}</small>
+                    </use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="screen">
+    <h1>Music</h1>
+  </div>
+</main>
+<footer class="bg-dark">
+  <p>footer title</p>
+  <div class="social"></div>
+</footer>
+{% endblock %}

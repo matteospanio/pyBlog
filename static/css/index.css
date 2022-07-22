@@ -1,0 +1,129 @@
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url("/static/img/cover.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: #fff;
+}
+
+.back-to-top {
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.immagine {
+  height: auto;
+  max-width: 128px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.music {
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: rgb(190, 190, 190);
+}
+
+.neonText {
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff,
+      0 0 40px rgb(212, 0, 255), 0 0 80px rgb(212, 0, 255),
+      0 0 90px rgb(212, 0, 255), 0 0 100px rgb(212, 0, 255),
+      0 0 150px rgb(212, 0, 255);
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+.social {
+}
+
+.screen {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.latest-blog {
+  height: 100vh;
+}
+@media screen and (max-width: 768px) {
+  .immagine {
+    max-width: 100px;
+  }
+  .nav {
+    display: none;
+  }
+}
+
+.tech-slideshow {
+  height: 100px;
+  width: 700px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mover-1 {
+  height: 150px;
+  width: max-content;
+
+  position: absolute;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+
+  animation: moveSlideshow 7s linear infinite;
+}
+
+.mover-1 img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  margin: 0;
+}
+
+@keyframes moveSlideshow {
+  100% {
+    transform: translateX(-730px);
+  }
+}
