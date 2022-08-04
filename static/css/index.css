@@ -16,8 +16,6 @@ a:hover {
   text-decoration-color: #fff;
 }
 
-.back-to-top {
-}
 
 .header {
   background-color: rgba(0, 0, 0, 0.5);
@@ -38,8 +36,6 @@ a:hover {
   flex-direction: column;
 }
 
-.music {
-}
 
 .nav-link {
   color: white;
@@ -75,6 +71,7 @@ a:hover {
 }
 
 .social {
+  display: flex;
 }
 
 .screen {
@@ -84,9 +81,14 @@ a:hover {
   display: flex;
 }
 
+.svg {
+  padding-left: 0.5rem;
+}
+
 .latest-blog {
   height: 100vh;
 }
+
 @media screen and (max-width: 768px) {
   .immagine {
     max-width: 100px;

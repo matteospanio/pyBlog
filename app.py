@@ -15,6 +15,7 @@ flatpages = FlatPages(app)
 freezer = Freezer(app)
 app.config.from_object(__name__)
 
+
 @app.get('/')
 def index():
     posts = [p for p in flatpages if p.path.startswith(POST_DIR)]
@@ -34,6 +35,11 @@ def post(name):
     path = '{}/{}'.format(POST_DIR, name)
     post = flatpages.get_or_404(path)
     return render_template('post.html', post=post)
+
+
+@app.get('/contacts/')
+def contacts():
+    return render_template('contacts.html')
 
 
 if __name__ == '__main__':

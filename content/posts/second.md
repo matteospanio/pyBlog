@@ -1,13 +1,16 @@
-title: Il mio primo vero articolo
+---
+title: A test article
 date: 2022-07-15
-tags: [prova2, codice]
+tags: [test, coding]
 image: img/home.png
+---
 
-ciao
 
-## My first real article
+## My first article
 
-Questo è il mio primo vero articolo, in cui descrivo tutti i linguaggi di programmazione che conosco:
+What can I do? What can I say?
+
+Well, 
 
 - C
 
