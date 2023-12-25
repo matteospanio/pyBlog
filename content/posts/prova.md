@@ -1,7 +1,7 @@
 ---
 title: Should it be YYYY-MM-DD or YYYY-DD-MM? My Thoughts
 date: 2013-08-27
-url: prova
+url: test
 id: 1
 tags: [musica, musica classica, jazz, clarinetto]
 image: img/cover.jpg
@@ -37,7 +37,7 @@ $$ \pi + \sigma $$
         }
     }
 
-# Prova di scrittura
+# Sample title
 
     ::r
     fit <- lm( y ~ x, data = data )
@@ -45,7 +45,7 @@ $$ \pi + \sigma $$
 
     plot(fit)
 
-Ed ecco un esempio javascript
+Javascript:
 
     ::javascript
     const point = {
